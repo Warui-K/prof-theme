@@ -7,10 +7,16 @@ function ki_enqueue()
 
     //Register the stylesheet
     wp_register_style('ki_style_header', $uri . '/style.css', [], $ver);
+    wp_register_style('ki_fontawesome', $uri . '/assets/vendor/fontawesome-free-5.15.4-web/css/all.css', [], $ver);
+
     wp_register_style('ki_custom_css', $uri . '/assets/css/app.css', [], $ver);
+
+    
   
     //Enqueue the stylesheer
     wp_enqueue_style('ki_style_header');
+    wp_enqueue_style('ki_fontawesome');
+
     wp_enqueue_style('ki_custom_css');
   
 
