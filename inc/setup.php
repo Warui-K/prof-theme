@@ -10,6 +10,11 @@ function ki_setup_theme()
         'footer_menu' => __('Footer Menu', 'kinotiwp')
     ));
 
+    register_nav_menus(array(
+        'footer_social' => __('Footer Social', 'kinotiwp')
+    ));
+
+
     //Support for HTML5
     add_theme_support('HTML5', array(
         'search-form', 'comment-list'
@@ -27,6 +32,22 @@ function ki_setup_theme()
 
     //Support for Title Tags
     add_theme_support('title-tag');
+
+    add_filter( 'wp_title', 'ki_title' );
+ 
+/**
+ * Customize the title for the home page, if one is not set.
+ *
+ * @param string $title The original title.
+ * @return string The title to use.
+ */
+function ki_title( $title )
+{
+  if ( empty( $title ) && ( is_home() || is_front_page() ) ) {
+    $title = __( 'Home', 'kinotiwp' ) . ' | ' . get_bloginfo( 'description' );
+  }
+  return $title;
+}
 }
 
 function ki_set_excerpt_length()

@@ -44,7 +44,7 @@ $description = get_the_archive_description();
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="site-preview-intro">
             <div class="pt-4 pb-4 text-center">
@@ -190,12 +190,11 @@ $description = get_the_archive_description();
     </div>
 
 </main>
-<div class="container">
+<div class="container-fluid">
     <div class="site-newsletter">
         <div class="text-center">
             <h1 class="mb-3"><?php _e('Online Resources', 'kinotiwp');?></h1>
             <p class="mb-4"><?php _e('Read, Listen and Watch');?></p>
-            <div class="container">
                 <div class="row">
 
                     <div class="col-md-11 col-lg-12 mx-auto">
@@ -302,7 +301,6 @@ $description = get_the_archive_description();
                     <a href="<?php echo get_theme_mod('ki_site_resources_all_resources'); ?>" class="btn btn-success btn-lg"><?php _e('View ALL', 'kinotiwp');?></a>
                 </div>
 
-            </div>
 
         </div>
     </div>
@@ -312,30 +310,30 @@ $description = get_the_archive_description();
 <div class="site-instagram">
 <div class="action">
     <a class="btn btn-light" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-        <?php _e('Blog', 'kinotiwp');?>
+        <?php _e('Visit Our Blog Page', 'kinotiwp');?>
     </a>
 </div>
 <div class="row no-gutters">
     <div class="col-sm-6">
         <div class="row no-gutters">
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/1.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_1');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_1'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/2.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_2');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_2'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/3.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_3');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_3'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/4.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_4');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_4'); ?>" alt="" />
                 </a>
             </div>
         </div>
@@ -343,26 +341,27 @@ $description = get_the_archive_description();
     <div class="col-sm-6">
         <div class="row no-gutters">
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/5.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_5');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_5'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/6.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_6');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_6'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/7.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_7');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_7'); ?>" alt="" />
                 </a>
             </div>
             <div class="col-3">
-                <a class="photo" href="#">
-                    <img class="img-fluid" src="img/instagram/8.jpg" alt="" />
+                <a class="photo" href="<?php echo get_theme_mod('ki_site_blog_gallery_l_8');?>">
+                    <img class="img-fluid" src="<?php echo get_theme_mod('ki_site_blog_gallery_8'); ?>" alt="" />
                 </a>
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php get_footer( );?>
