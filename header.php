@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <title>Kinoti Notes</title>
+    <title><?php wp_title(''); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
@@ -13,8 +13,8 @@
 <body <?php body_class(); ?>>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-white absolute-top">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light absolute-top">
+            <div class="container-fluid">
 
                 <button class="navbar-toggler order-2 order-md-1" type="button" data-toggle="collapse"
                     data-target=".navbar-collapse" aria-controls="navbar-left navbar-right" aria-expanded="false"
@@ -22,7 +22,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                    <?php
+                <?php
                 wp_nav_menu( array(
                 'theme_location'  => 'primary',
                 'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
@@ -33,9 +33,20 @@
                 'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'          => new WP_Bootstrap_Navwalker(),
             ) );?>
-       
 
-                <a class="navbar-brand mx-auto order-1 order-md-3" href="index.html">Kinøti</a>
+                <?php
+                                if (has_custom_logo()) {
+                                    the_custom_logo();
+                                } else {
+                                ?>
+                <a class="navbar-brand mx-auto order-1 order-md-3" href="<?php echo esc_url(home_url('/')); ?>"
+                    class="d-inline-block align-top">
+                    <?php bloginfo('name'); ?></a>
+                <?php
+                                }
+                                ?>
+
+
 
                 <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
                     <ul class="navbar-nav ml-auto">
