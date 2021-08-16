@@ -33,7 +33,10 @@ function ki_setup_theme()
     //Support for Title Tags
     add_theme_support('title-tag');
 
-    add_filter( 'wp_title', 'ki_title' );
+
+}
+
+add_filter( 'wp_title', 'ki_title' );
  
 /**
  * Customize the title for the home page, if one is not set.
@@ -47,7 +50,6 @@ function ki_title( $title )
     $title = __( 'Home', 'kinotiwp' ) . ' | ' . get_bloginfo( 'description' );
   }
   return $title;
-}
 }
 
 function ki_set_excerpt_length()
